@@ -1,0 +1,41 @@
+<view class="backgroundView">
+
+  <!-- 列表 -->
+  <view class="contentView">
+    <text  wx:if="{{ initDataSuccess }}" class="dateText">{{today}}</text>
+    <item wx:if="{{ todoList.length > 0 }}" 
+      wx:for="{{ todoList }}" wx:key="id" 
+      content="{{item.content}}" isFinished="{{item.finished}}"
+      binditemDidSelected="itemDidSelected" data-index="{{index}}">
+    </item>
+    <text wx:if="{{ initDataSuccess && todoList.length == 0 }}" style="color: #9B9B9B">还没有待办事项哦~</text>
+    <view wx:if="{{ initDataFail }}" class="loadFailView">
+      <image wx:if="{{ initDataFail }}" src="/images/loadFail.png" class="loadFailImage" catchtap="reloadData"></image>
+      <text wx:if="{{ initDataFail }}" class="loadFailText">数据加载失败，点击图标重试！</text>
+    </view>
+  </view>
+  <view class="footer">
+    <text wx:if="{{ initDataSuccess || initDataFail }}">Design by Alex Dovhyi</text>
+  </view>
+
+  <!-- 添加按钮 -->
+  <image wx:if="{{ initDataSuccess }}" src="/images/add-todo.png" class="addTodo" catchtap="addTodoButtonTap"></image>
+
+  <!-- 添加View -->
+  <view class="addTodoPage" wx:if="{{showAddTodoPage}}">
+    <view class="inputView">
+      <input class="input" 
+        wx:if="{{showAddTodoPage}}" 
+        placeholder="添加一条新待办"
+        bindconfirm="addNewTodo"
+        bindinput="inputTodo"
+        confirm-type="done"
+        auto-focus />
+      <image src="/images/submit-todo.png" 
+        class="inputImage"
+        wx:if="{{showAddTodoPage}}" bindtap="addNewTodo"></image>
+    </view>
+    <view class="backgroundMaskView" wx:if="{{showAddTodoPage}}" catchtap="dismissAddNewTodoPage"></view>
+  </view>
+  
+</view>

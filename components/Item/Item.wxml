@@ -1,0 +1,6 @@
+<view class="itemContainer">
+  <checkbox-group bindchange="boxSelected">
+    <checkbox checked="{{itemIsFinished}}" bindC color="black"></checkbox>
+  </checkbox-group>
+  <text class="{{itemIsFinished ? 'itemContent-Finish': 'itemContent'}}">{{content}}</text>
+</view>

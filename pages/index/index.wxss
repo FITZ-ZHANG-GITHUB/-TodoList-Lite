@@ -1,0 +1,96 @@
+.backgroundView {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.contentView {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-left: 160rpx;
+  margin-top: 80rpx;
+  padding-bottom: 80rpx;
+  height: 100%;
+  width: 100%;
+}
+
+.dateText {
+  display: inline-block;
+  margin-bottom: 48rpx;
+}
+
+.loadFailView {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 160rpx;
+  margin-top: 200rpx;
+}
+
+.loadFailImage {
+  width: 342rpx;
+  height: 256rpx;
+}
+
+.loadFailText {
+  margin-top: 50rpx;
+  color: #9B9B9B;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 30rpx;
+  margin-bottom: 40rpx;
+  padding: 0 10rpx;
+  font-size: 28rpx;
+  color: #9B9B9B;
+}
+
+.addTodo {
+  position: fixed;
+  width: 80rpx;
+  height: 80rpx;
+  bottom: 80rpx;
+  right: 40rpx;
+}
+
+.addTodoPage {
+  display: flexbox;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+}
+
+.backgroundMaskView {
+  display: flex;
+  height: 100vh;
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
+.inputView {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+}
+
+.input {
+  flex: 1;
+  height: 60rpx;
+  color: black;
+  align-items: center;
+  border: 4rpx solid black;
+  padding: 20rpx;
+  margin: 20rpx;
+  border-radius: 16rpx;
+}
+
+.inputImage {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+}
+
